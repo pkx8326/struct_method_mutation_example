@@ -25,10 +25,14 @@ Each function will be called according to the chosen choice. Once the user compl
 The program flow is shown as the following numbered list:
 
 1. The program presents the user with 4 choices:
-    \r1.1 Input Data
-    \r1.2 Display Data
-    \r1.3 Clear Data
-    \r1.4 Exit
+
+    1.1 Input Data
+
+    1.2 Display Data
+
+    1.3 Clear Data
+
+    1.4 Exit
 
 2. The user can choose any of each choice by inputting the preceeding number. There is no order for choosing any choice. But if the user chooses to display data first, the default data for strig ("") and floating number (0) types will be displayed. If the user chooses to input the data, the user inputs will be stored in a struct with the field names "first name", "last name", and "score". If the user chooses to display or clear the data, the original struct will be read/modify directly according to the use of pointer with struct data type.
 
