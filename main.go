@@ -15,7 +15,7 @@ func main() {
 
 		c := menu()
 		if c == "1" {
-			studentdata = getdata()
+			studentdata = *getdata() //getdata() returns a pointer, we need to de-reference it to get its value
 			nxoptn = nextoptn()
 		} else if c == "2" {
 			studentdata.displaydata()
@@ -36,7 +36,7 @@ func main() {
 }
 
 ////////////////////////////////////////////////
-func getdata() (studentdata student) { //This function is a struct method
+func getdata() (studentdata *student) { //This function is a struct method
 	var studentfirstname, studentlastname string
 	var studentscore float64
 
@@ -47,7 +47,7 @@ func getdata() (studentdata student) { //This function is a struct method
 	fmt.Print("Please input the student's score :")
 	fmt.Scan(&studentscore)
 
-	studentdata = student{
+	studentdata = &student{ //This line is the struct's pointer
 		firstname: studentfirstname,
 		lastname:  studentlastname,
 		score:     studentscore,
